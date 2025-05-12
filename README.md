@@ -13,7 +13,7 @@
 
 These tutorials make use of the publicly available Petawawa Research Forest (PRF)  dataset provided by the Canadian Forest Service (CFS).  The PRF is the oldest research forest in Canada, dating back to 1918. As such, the area has a rich historical record of remote sensing and forest inventory data, and has recently become a remote sensing "supersite".
 
-**You can view all the full PRF dataset at the following link:**
+**You can view the full PRF dataset at the following link:**
 
 [https://opendata.nfis.org/mapserver/PRF.html](https://opendata.nfis.org/mapserver/PRF.html)
 
