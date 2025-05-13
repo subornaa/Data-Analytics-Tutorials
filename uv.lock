@@ -960,6 +960,42 @@ wheels = [
 ]
 
 [[package]]
+name = "laspy"
+version = "2.5.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/07/62/d0ff891cba131f2643ee0152205b1d2eb9634fc690bb456ca87c06f645d4/laspy-2.5.4.tar.gz", hash = "sha256:eebdbf3379afbc0b24e7e4812fac567bff880d1e851f70175d22375aaecdf7e1", size = 1563243, upload-time = "2024-06-19T17:31:12.491Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/bc/64/8be19bc661fe6281b1c9343f9caa18e187ddc9506abb20b0110e0d7eaed5/laspy-2.5.4-py3-none-any.whl", hash = "sha256:5fc37a8a1a5e22c98bad4123281b55e5e41784943ca251828d72c932b167583e", size = 84254, upload-time = "2024-06-19T17:32:22.276Z" },
+]
+
+[package.optional-dependencies]
+lazrs = [
+    { name = "lazrs" },
+]
+
+[[package]]
+name = "lazrs"
+version = "0.6.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f9/34/88daa6270dc5aee202060e2e5734fcf7e0ab525cee343b4a00624fdb180e/lazrs-0.6.3.tar.gz", hash = "sha256:ccdb0fcde74e6c6377badbd895a5ee5d2bb23c3c3d04c45486033c12ae1685e3", size = 10084, upload-time = "2025-05-02T19:01:30.575Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/bb/f7/81917152f96c66f2e9f12d7b4f1aa350d7aaf33990c5465198edb5f7dcb1/lazrs-0.6.3-cp312-cp312-macosx_10_12_x86_64.whl", hash = "sha256:f9618888359f3cbd657fa2cc5ee3cc628fb5f225f8c3f4095c07a1e8b38d778f", size = 568104, upload-time = "2025-05-02T19:02:17.599Z" },
+    { url = "https://files.pythonhosted.org/packages/ff/e6/960d8913352cf215555b368ad6db94ab4db7fc18229648e8c7e03fc94f89/lazrs-0.6.3-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:1d695030e206a09f4402d421bec8774f41879b2b1b9f69846d4feaec296e39ed", size = 570195, upload-time = "2025-05-02T19:02:20.22Z" },
+    { url = "https://files.pythonhosted.org/packages/d5/27/1851bf7408428dfa595174a8ffdafdab95222c179a19cfacb68197f0dcc4/lazrs-0.6.3-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:9f8cde60c321006d825e509733f413925dcfaa6a3a384065ee0034f19486380f", size = 633866, upload-time = "2025-05-02T19:02:22.451Z" },
+    { url = "https://files.pythonhosted.org/packages/e8/61/9e7c280fca52d578e652821a42ae317bca89556619870656d503f38e8efc/lazrs-0.6.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b16bd9160e60dec9e3ac530d0e31b4cf748b52f9291a426aaff895dc06e2c0a3", size = 641043, upload-time = "2025-05-02T19:02:24.536Z" },
+    { url = "https://files.pythonhosted.org/packages/26/8a/b80932f52ef8200deb023f88b38ff1c709c1f07fa0da9ed4d120ce99ae4e/lazrs-0.6.3-cp312-cp312-win32.whl", hash = "sha256:699a025ed3cc4b250a8a0ed7ce33eebfee14d7e0d0c2c1f19364a8ec345119ce", size = 407107, upload-time = "2025-05-02T19:02:26.005Z" },
+    { url = "https://files.pythonhosted.org/packages/53/be/4daa86178829da7b1057f477b23f508fff0ac34260ba4132dd9c583d65be/lazrs-0.6.3-cp312-cp312-win_amd64.whl", hash = "sha256:cb1f066f9838ca268619e1ac997c99236f4420b51b37d549f651a64f1ac472d5", size = 423015, upload-time = "2025-05-02T19:02:27.818Z" },
+    { url = "https://files.pythonhosted.org/packages/0f/d7/ce91a6b66d98c6355dcfc97fb2d801cc37804f6665e51556c3afe7b99f84/lazrs-0.6.3-cp313-cp313-macosx_10_12_x86_64.whl", hash = "sha256:182a7d03eb2f527e8a4f699fa376e472ee3dd2b1c70bddefbb107b8108766a7b", size = 567677, upload-time = "2025-05-02T19:02:29.8Z" },
+    { url = "https://files.pythonhosted.org/packages/c4/e2/0b667c07fb1bd0e327e21ce9d2bf4f86e8d651f1339c51c200d925a42deb/lazrs-0.6.3-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:29bf0ff6d09e2f96379ca3229963b0b874bd06bb9086a0504d7b9ca751ec2b7c", size = 569560, upload-time = "2025-05-02T19:02:31.5Z" },
+    { url = "https://files.pythonhosted.org/packages/da/ba/87881b9287baef3dd50d048c2085c67823dd575c4e168b9f4f5b63709b5c/lazrs-0.6.3-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:2f74ff696686f1272a8a2491d357559e1b452946c380633d92f1987a6788dcee", size = 640626, upload-time = "2025-05-02T19:02:32.889Z" },
+    { url = "https://files.pythonhosted.org/packages/0c/46/06fb83dc3c560ef351ea25ed99f1b6c38f33d3571acdf2da773612100625/lazrs-0.6.3-cp313-cp313-win32.whl", hash = "sha256:713188967034fe49280cd7f0c18f90fb564c0bf2803f5bd232e5a6e73df336a6", size = 406618, upload-time = "2025-05-02T19:02:34.194Z" },
+    { url = "https://files.pythonhosted.org/packages/0a/1a/568f2d7da5fb344d124289d1a216f69a2725d84031301681027d08f867c0/lazrs-0.6.3-cp313-cp313-win_amd64.whl", hash = "sha256:6e5ad82a066b047dec9810dba5e3698a1d51b5d49ed45ef33ca63cdb26b3feb1", size = 422598, upload-time = "2025-05-02T19:02:35.557Z" },
+]
+
+[[package]]
 name = "mapclassify"
 version = "2.8.1"
 source = { registry = "https://pypi.org/simple" }
@@ -1301,6 +1337,7 @@ dependencies = [
     { name = "geodatasets" },
     { name = "geopandas" },
     { name = "ipywidgets" },
+    { name = "laspy", extra = ["lazrs"] },
     { name = "mapclassify" },
     { name = "matplotlib" },
     { name = "notebook" },
@@ -1316,6 +1353,7 @@ requires-dist = [
     { name = "geodatasets", specifier = "==2024.8.0" },
     { name = "geopandas", specifier = "==1.0.1" },
     { name = "ipywidgets", specifier = "==8.1.6" },
+    { name = "laspy", extras = ["lazrs"] },
     { name = "mapclassify", specifier = "==2.8.1" },
     { name = "matplotlib", specifier = "==3.10.1" },
     { name = "notebook", specifier = "==7.4.1" },
