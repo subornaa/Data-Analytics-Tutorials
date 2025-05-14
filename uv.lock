@@ -1353,7 +1353,7 @@ requires-dist = [
     { name = "geodatasets", specifier = "==2024.8.0" },
     { name = "geopandas", specifier = "==1.0.1" },
     { name = "ipywidgets", specifier = "==8.1.6" },
-    { name = "laspy", extras = ["lazrs"] },
+    { name = "laspy", extras = ["lazrs"], specifier = "==2.5.4" },
     { name = "mapclassify", specifier = "==2.8.1" },
     { name = "matplotlib", specifier = "==3.10.1" },
     { name = "notebook", specifier = "==7.4.1" },
