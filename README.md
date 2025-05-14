@@ -47,7 +47,7 @@ Individual tree measurements were taken at permanent sample plots (PSPs) across 
 | species          | Tree common species name                                                     |
 | Origin           | Origin. N = natural (includes coppice), P = planted                          |
 | Status           | Status. L = Live, D = Dead (only includes decayclass 1 & 2)                  |
-| DBH              | Dbh (cm)                                                                     |
+| DBH              | Diameter at breast height (cm)                                               |
 | CrownClass       | Crown class (D = Dominant; C = Codominant; I = Intermediate; OS = Overtopped/suppressed; A = Anomaly; E = Emergent)                                                                                         |
 | DecayClass       | Decay class (1 = recently dead, top is intact; 2 = greater than 50 % coarse; >3 = dead for several years)                                                                                            |
 | height           | Tree top height in meters                                                    |
