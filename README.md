@@ -87,11 +87,10 @@ It is also worth noting that information available to AI is in many cases out of
 
 **You can learn more about the PRF in the following publications:**
 
-* [White, Joanne C., et al. "The Petawawa Research Forest: Establishment of a remote sensing supersite." The Forestry Chronicle 95.3 (2019): 149-156.](https://doi.org/10.5558/tfc2019-024).
-
-* [Hoepting, Michael, Trevor Jones, and Jeff Fera. "Collaborating on climate change at the Petawawa Research Forest." The Forestry Chronicle 95.2 (2019): 62-65.](https://pubs.cif-ifc.org/doi/abs/10.5558/tfc2019-012)
+* [Riofrío, José, et al. "Modelling height growth of temperate mixedwood forests using an age-independent approach and multi-temporal airborne laser scanning data." Forest Ecology and Management 543 (2023): 121137.](https://doi.org/10.1016/j.foreco.2023.121137)
 
 * [Bolton, Douglas K., et al. "Optimizing Landsat time series length for regional mapping of lidar-derived forest structure." Remote sensing of Environment 239 (2020): 111645.](https://doi.org/10.1016/j.rse.2020.111645)
 
+* [White, Joanne C., et al. "The Petawawa Research Forest: Establishment of a remote sensing supersite." The Forestry Chronicle 95.3 (2019): 149-156.](https://doi.org/10.5558/tfc2019-024).
 
-
+* [Hoepting, Michael, Trevor Jones, and Jeff Fera. "Collaborating on climate change at the Petawawa Research Forest." The Forestry Chronicle 95.2 (2019): 62-65.](https://pubs.cif-ifc.org/doi/abs/10.5558/tfc2019-012)
