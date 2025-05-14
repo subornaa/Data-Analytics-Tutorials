@@ -26,10 +26,9 @@ These tutorials are designed to be run on **[Google Collab](https://colab.resear
 
 # Data Description
 
-The tutorials will use several different datasets from the PRF, these are listed below and described in more detail in the following sections.
+The tutorials will use several different datasets from the PRF, these are described in more detail in the following sections.
 
-- Invidual Tree Measurements
-- Plot locations
+
 
 **[All data used in the tutorials is available on Google Drive at this link](https://drive.google.com/file/d/1UDKAdXW0h6JSf7k31PZ-srrQ3487l9e2/view?usp=sharing)**
 
@@ -58,9 +57,12 @@ Individual tree measurements were taken at permanent sample plots (PSPs) across 
 | biomass          | Aboveground biomass (kg/ha)                                                  |
 | size             | Sawlog size category (Poles, Under, Small, Medium, Large)                    |
 
+
 ## Plot Locations
 
-Field plots in the PRF containing the trees in `trees.csv` are georeferenced, and their locations are provided in the `plots.gpkg` file. This is a spatial point dataset stored in a GeoPackage (.gpkg) file. The data is projected in the **WGS 84 / UTM zone 18N** coordinate reference system (CRS).
+**File: plots.gpkg**
+
+Field plots in the PRF containing the trees in `trees.csv` are georeferenced, and their locations are provided in the `plots.gpkg` file. This is a spatial point dataset stored in a GeoPackage (.gpkg) file.
 
 Each field plot is circular, with a radius of 14.1m (625m^2). Note that this dataset is in a **point** format (i.e., only XY coordinates of plot centers).
 
@@ -73,7 +75,29 @@ Each field plot is circular, with a radius of 14.1m (625m^2). Note that this dat
 | Source     | Device used to collect the coordinates of the plot center. Note that the spatial accuracy of coordinates vary between devices. |
 
 
-**File: plots.gpkg**
+## PRF Boundary
+
+**File: boundary.gpkg**
+
+Polygon dataset including the boundary of the Petawawa Research Forest (PRF). The data is projected in the **WGS 84 / UTM zone 18N** coordinate reference system (CRS). All other spatial datasets are projected in this CRS unless otherwise specified.
+
+## PRF Water
+
+**File: water.gpkg**
+
+Polygons delineating water bodies in the PRF including lakes, wetlands, rivers, and creeks.
+
+## LiDAR-derived 99th Height Percentile (P99)
+
+**File: p99.tif**
+
+LiDAR (airborne laser scanning) derived 99th height percentile raster in PRF. This raster can be used as a proxy for the forest canopy height.
+
+## LiDAR Point Cloud Subset
+
+**File: forest_point_cloud.las**
+
+LiDAR (airborne laser scanning) point cloud of a forested subset area in the PRF. Data is provided in the LAS file format, and includes XYZ coordinates of LiDAR returns. 
 
 # Suggested Use of AI
 
