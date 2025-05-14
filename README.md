@@ -39,31 +39,29 @@ The tutorials will use several different datasets from the PRF, these are listed
 
 Individual tree measurements were taken at permanent sample plots (PSPs) across the PRF in 2018. A data dictionary is provided below summarizing the `trees.csv`. In this data, each tree is a row and each column is an attribute (e.g., height).
 
-| **Column**       | **Definition**                                                                 |
-|------------------|-------------------------------------------------------------------------------|
-| PlotName         | Plot name                                                                    |
-| TreeID           | Tree ID                                                                      |
-| TreeSpec         | Tree species                                                                 |
+| **Column**       | **Definition**                                                               |
+|------------------|------------------------------------------------------------------------------|
+| PlotName         | Unique plot identifier                                                       |
+| TreeID           | Unique tree identifier                                                       |
+| species          | Tree common species name                                                     |
 | Origin           | Origin. N = natural (includes coppice), P = planted                          |
 | Status           | Status. L = Live, D = Dead (only includes decayclass 1 & 2)                  |
 | DBH              | Dbh (cm)                                                                     |
-| CrownClass       | Crown class                                                                  |
-| QualityClass     | Quality class                                                                |
-| DecayClass       | Decay class                                                                  |
-| Ht               | Height (m), includes estimated heights                                       |
-| HLF              | HLF                                                                          |
-| HtFlag           | HtFlag                                                                       |
+| CrownClass       | Crown class (D = Dominant; C = Codominant; I = Intermediate; OS = Overtopped/suppressed; A = Anomaly; E = Emergent)                                                                                         |
+| DecayClass       | Decay class (1 = recently dead, top is intact; 2 = greater than 50 % coarse; >3 = dead for several years)                                                                                            |
+| height           | Tree top height in meters                                                    |
 | baha             | Basal area/ha = Dbh * Dbh * 0.00007854 * stems                               |
-| ht_meas          | Height (m), if measured in the field                                         |
-| stems            | Stems per hectare (number of trees/ha each tree represents)                  |
+| codom            | Whether a tree is codominant or not (either Y or N)                          |
 | mvol             | Gross merchantable volume (m³/ha)                                            |
-| tvol             | Gross total volume (m³/ha)                                                  |
-| biomass          | Aboveground biomass (kg/ha)                                                 |
-| size             | Sawlog size                                                                  |
+| tvol             | Gross total volume (m³/ha)                                                   |
+| biomass          | Aboveground biomass (kg/ha)                                                  |
+| size             | Sawlog size category (Poles, Under, Small, Medium, Large)                    |
 
 ## Plot Locations
 
-Field plots in the PRF containing the trees in `trees.csv` are georeferenced, and their locations are provided in the `plots.gpkg` file. This is a spatial dataset stored in a GeoPackage (.gpkg) file. The data is projected in the **WGS 84 / UTM zone 18N** coordinate reference system (CRS).
+Field plots in the PRF containing the trees in `trees.csv` are georeferenced, and their locations are provided in the `plots.gpkg` file. This is a spatial point dataset stored in a GeoPackage (.gpkg) file. The data is projected in the **WGS 84 / UTM zone 18N** coordinate reference system (CRS).
+
+Each field plot is circular, with a radius of 14.1m (625m^2). Note that this dataset is in a **point** format (i.e., only XY coordinates of plot centers).
 
 | **Column** | **Definition**                                                                 |
 |------------|-------------------------------------------------------------------------------|
