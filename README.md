@@ -101,7 +101,7 @@ LiDAR (airborne laser scanning) derived 99th height percentile raster in PRF. Th
 
 Sentinel-2 (S2) is a European Space Agency multispectral satellite constellation including 3 sensors. S2 imagery contains 12 bands spanning the visible, near infrared, and shortwave infrared portions of the electromagnetic spectrum, with a spatial resolution ranging from 10m - 60m depending on the band. The table below summarized all the S2 bands. For the purpose of this analyis, all S2 imagery was resampled to a 10m resolution, but understand that this does not account for the fact that some bands are inherently lower resolution.
 
-We include two time steps of S2 imagery in this analysis to support temporal anlysis, including imagery of the PRF from 2018 and 2024.
+We include two time steps of S2 imagery to support temporal anlysis, including imagery of the PRF from 2018 and 2024.
 
 S2 imagery was processed in Google Earth Engine (GEE) using the following script:
 
