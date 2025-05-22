@@ -101,16 +101,6 @@ LiDAR (airborne laser scanning) derived 99th height percentile raster in PRF. Th
 
 Sentinel-2 (S2) is a European Space Agency multispectral satellite constellation including 3 sensors. S2 imagery contains 12 bands spanning the visible, near infrared, and shortwave infrared portions of the electromagnetic spectrum, with a spatial resolution ranging from 10m - 60m depending on the band. The table below summarized all the S2 bands. For the purpose of this analyis, all S2 imagery was resampled to a 10m resolution, but understand that this does not account for the fact that some bands are inherently lower resolution.
 
-We include two time steps of S2 imagery to support temporal anlysis, including imagery of the PRF from 2018 and 2024.
-
-S2 imagery was processed in Google Earth Engine (GEE) using the following script:
-
-https://code.earthengine.google.com/e0a63220c15068398d6d432be5e3ccb8
-
-The dataset is described in more detail at the link below:
-
-https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED
-
 | Band  | Wavelength (S2A / S2B)                | Description     |
 |-------|---------------------------------------|-----------------|
 | B1    | 443.9nm / 442.3nm                     | Aerosols        |
@@ -125,6 +115,16 @@ https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HAR
 | B9    | 945nm / 943.2nm                       | Water vapor     |
 | B11   | 1613.7nm / 1610.4nm                   | SWIR 1          |
 | B12   | 2202.4nm / 2185.7nm                   | SWIR 2          |
+
+We include two time steps of S2 imagery to support temporal anlysis, including imagery of the PRF from 2018 and 2024.
+
+S2 imagery was processed in Google Earth Engine (GEE) using the following script:
+
+https://code.earthengine.google.com/e0a63220c15068398d6d432be5e3ccb8
+
+The dataset is described in more detail at the link below:
+
+https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED
 
 ## LiDAR Point Cloud Subset
 
