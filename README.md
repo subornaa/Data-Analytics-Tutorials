@@ -130,7 +130,13 @@ https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HAR
 
 **File: forest_point_cloud.las**
 
+**Files:**
+- **forest_point_cloud.las**
+- **forest_point_cloud_footprint.gpkg**
+
 LiDAR (airborne laser scanning) point cloud of a forested subset area in the PRF. Data is provided in the LAS file format, and includes XYZ coordinates of LiDAR returns. 
+
+The spatial coverage (i.e., footprint) of the LAS file is provided in the associated `forest_point_cloud_footprint.gpkg` file.
 
 # Suggested Use of AI
 
