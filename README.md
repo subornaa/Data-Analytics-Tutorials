@@ -93,6 +93,39 @@ Polygons delineating water bodies in the PRF including lakes, wetlands, rivers, 
 
 LiDAR (airborne laser scanning) derived 99th height percentile raster in PRF. This raster can be used as a proxy for the forest canopy height.
 
+## Sentinel-2 Imagery
+
+**Files:**
+- **petawawa_s2_2018.tif**
+- **petawawa_s2_2024.tif**
+
+Sentinel-2 (S2) is a European Space Agency multispectral satellite constellation including 3 sensors. S2 imagery contains 12 bands spanning the visible, near infrared, and shortwave infrared portions of the electromagnetic spectrum, with a spatial resolution ranging from 10m - 60m depending on the band. The table below summarized all the S2 bands. For the purpose of this analyis, all S2 imagery was resampled to a 10m resolution, but understand that this does not account for the fact that some bands are inherently lower resolution.
+
+We include two time steps of S2 imagery in this analysis to support temporal anlysis, including imagery of the PRF from 2018 and 2024.
+
+S2 imagery was processed in Google Earth Engine (GEE) using the following script:
+
+https://code.earthengine.google.com/e0a63220c15068398d6d432be5e3ccb8
+
+The dataset is described in more detail at the link below:
+
+https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED
+
+| Band  | Wavelength (S2A / S2B)                | Description     |
+|-------|---------------------------------------|-----------------|
+| B1    | 443.9nm / 442.3nm                     | Aerosols        |
+| B2    | 496.6nm / 492.1nm                     | Blue            |
+| B3    | 560nm / 559nm                         | Green           |
+| B4    | 664.5nm / 665nm                       | Red             |
+| B5    | 703.9nm / 703.8nm                     | Red Edge 1      |
+| B6    | 740.2nm / 739.1nm                     | Red Edge 2      |
+| B7    | 782.5nm / 779.7nm                     | Red Edge 3      |
+| B8    | 835.1nm / 833nm                       | NIR             |
+| B8A   | 864.8nm / 864nm                       | Red Edge 4      |
+| B9    | 945nm / 943.2nm                       | Water vapor     |
+| B11   | 1613.7nm / 1610.4nm                   | SWIR 1          |
+| B12   | 2202.4nm / 2185.7nm                   | SWIR 2          |
+
 ## LiDAR Point Cloud Subset
 
 **File: forest_point_cloud.las**
