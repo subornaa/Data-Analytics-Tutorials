@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Data Analytics Tutorials in Forestry</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Data Analytics Tutorials in Forestry</h1>
+    <img src="prf_image.jpg" alt="PRF Image" id="banner-image">
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#background">Background</a></li>
+      <li><a href="#tutorials">Using Tutorials</a></li>
+      <li><a href="#data">Data Description</a></li>
+      <li><a href="#ai">Suggested Use of AI</a></li>
+      <li><a href="#references">Useful References</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="background">
+      <h2>Background</h2>
+      <p>These tutorials make use of the publicly available Petawawa Research Forest (PRF) dataset... <a href="https://opendata.nfis.org/mapserver/PRF.html" target="_blank">View Dataset</a></p>
+    </section>
+
+    <section id="tutorials">
+      <h2>Using Tutorials</h2>
+      <p>These tutorials are designed to be run on Google Colab...</p>
+    </section>
+
+    <section id="data">
+      <h2>Data Description</h2>
+      <h3>Individual Tree Measurements (trees.csv)</h3>
+      <p>Individual tree measurements were taken at permanent sample plots (PSPs) across the PRF 
+        in 2018. A data dictionary is provided below summarizing the trees.csv. In this data, 
+        each tree is a row and each column is an attribute (e.g., height).</p>
+      <table>
+        <thead>
+          <tr><th>Column</th><th>Definition</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>PlotName</td><td>Unique plot identifier</td></tr>
+          <tr><td>TreeID</td><td>Unique tree identifier</td></tr>
+          <tr><td>species</td><td>Tree common species name</td></tr>
+          <tr><td>Origin</td><td>N = natural, P = planted</td></tr>
+          <tr><td>Status</td><td>L = Live, D = Dead (decayclass 1 & 2)</td></tr>
+          <tr><td>DBH</td><td>Diameter at breast height (cm)</td></tr>
+          <tr><td>CrownClass</td><td>Crown class (D, C, I, OS, A, E)</td></tr>
+          <tr><td>DecayClass</td><td>Decay class (1, 2, >3)</td></tr>
+          <tr><td>height</td><td>Tree top height in meters</td></tr>
+          <tr><td>baha</td><td>Basal area/ha</td></tr>
+          <tr><td>codom</td><td>Codominant (Y/N)</td></tr>
+          <tr><td>mvol</td><td>Gross merchantable volume (m³/ha)</td></tr>
+          <tr><td>tvol</td><td>Gross total volume (m³/ha)</td></tr>
+          <tr><td>biomass</td><td>Aboveground biomass (kg/ha)</td></tr>
+          <tr><td>size</td><td>Sawlog size category</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Plot Locations</h3>
+      <p>File: plots.gpkg <br><br>
+        Field plots in the PRF containing the trees in trees.csv are georeferenced, 
+        and their locations are provided in the plots.gpkg file. This is a spatial point 
+        dataset stored in a GeoPackage (.gpkg) file. <br><br>
+        
+        Each field plot is circular, with a radius of 14.1m (625m^2). Note that this dataset 
+        is in a point format (i.e., only XY coordinates of plot centers).</p>
+      <table>
+        <thead>
+          <tr><th>Column</th><th>Definition</th></tr>
+        </thead>
+         <tbody>
+          <tr><td>Plot</td><td>Same as "PlotName" in <code>trees.csv</code></td></tr>
+          <tr><td>Date</td><td>Date of plot visit</td></tr>
+          <tr><td>Northing</td><td>Y coordinate</td></tr>
+          <tr><td>Easting</td><td>X coordinate</td></tr>
+          <tr><td>Source</td><td>Device used to collect coordinates</td></tr>
+        </tbody>
+      </table>
+
+      <h3>PRF Boundary</h3>
+      <p><strong>File: boundary.gpkg</strong></p>
+      <p>Polygon dataset in WGS 84 / UTM zone 18N.</p>
+
+      <h3>PRF Water</h3>
+      <p><strong>File: water.gpkg</strong></p>
+      <p>Water bodies (lakes, rivers, etc.) in polygon format.</p>
+
+      <h3>LiDAR-derived 99th Height Percentile (P99)</h3>
+      <p><strong>File: p99.tif</strong></p>
+      <p>Raster proxy for forest canopy height.</p>
+
+      <h3>Sentinel-2 Imagery</h3>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li>petawawa_s2_2018.tif</li>
+        <li>petawawa_s2_2024.tif</li>
+      </ul>
+      <p>Multispectral imagery with 12 bands. All resampled to 10m resolution.</p>
+
+      <table>
+        <thead>
+          <tr><th>Band</th><th>Wavelength</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>B1</td><td>443.9nm / 442.3nm</td><td>Aerosols</td></tr>
+          <tr><td>B2</td><td>496.6nm / 492.1nm</td><td>Blue</td></tr>
+          <tr><td>B3</td><td>560nm / 559nm</td><td>Green</td></tr>
+          <tr><td>B4</td><td>664.5nm / 665nm</td><td>Red</td></tr>
+          <tr><td>B5</td><td>703.9nm / 703.8nm</td><td>Red Edge 1</td></tr>
+          <tr><td>B6</td><td>740.2nm / 739.1nm</td><td>Red Edge 2</td></tr>
+          <tr><td>B7</td><td>782.5nm / 779.7nm</td><td>Red Edge 3</td></tr>
+          <tr><td>B8</td><td>835.1nm / 833nm</td><td>NIR</td></tr>
+          <tr><td>B8A</td><td>864.8nm / 864nm</td><td>Red Edge 4</td></tr>
+          <tr><td>B9</td><td>945nm / 943.2nm</td><td>Water vapor</td></tr>
+          <tr><td>B11</td><td>1613.7nm / 1610.4nm</td><td>SWIR 1</td></tr>
+          <tr><td>B12</td><td>2202.4nm / 2185.7nm</td><td>SWIR 2</td></tr>
+        </tbody>
+      </table>
+
+      <p>Processed using this script: <a href="https://code.earthengine.google.com/e0a63220c15068398d6d432be5e3ccb8" target="_blank">Earth Engine Script</a></p>
+      <p>More info: <a href="https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED" target="_blank">Dataset Overview</a></p>
+
+      <h3>LiDAR Point Cloud Subset</h3>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li>forest_point_cloud.las</li>
+        <li>forest_point_cloud_footprint.gpkg</li>
+      </ul>
+      <p>LiDAR point cloud with XYZ coordinates, in LAS format. Coverage defined by GeoPackage footprint.</p>
+    </section>
+
+    <section id="ai">
+      <h2>Suggested Use of AI</h2>
+      <p>AI tools are helpful, but caution is needed...</p>
+    </section>
+
+    <section id="references">
+      <h2>Useful References</h2>
+      <ul>
+        <li><a href="https://doi.org/10.1016/j.foreco.2023.121137" target="_blank">Riofrío et al. (2023), Forest Ecology and Management</a></li>
+        <li><a href="https://doi.org/10.1016/j.rse.2020.111645" target="_blank">Bolton et al. (2020), Remote Sensing of Environment</a></li>
+        <li><a href="https://doi.org/10.5558/tfc2019-024" target="_blank">White et al. (2019), The Forestry Chronicle</a></li>
+        <li><a href="https://pubs.cif-ifc.org/doi/abs/10.5558/tfc2019-012" target="_blank">Hoepting et al. (2019), The Forestry Chronicle</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Data Analytics in Forestry. All rights reserved.</p>
+  </footer>
+</body>
+</html>
