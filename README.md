@@ -87,11 +87,29 @@ Polygon dataset including the boundary of the Petawawa Research Forest (PRF). Th
 
 Polygons delineating water bodies in the PRF including lakes, wetlands, rivers, and creeks.
 
-## LiDAR-derived 99th Height Percentile (P99)
+## Airborne Laser Scanning (ALS) LiDAR derived metrics
 
-**File: p99.tif**
+**File: als_metrics.tif**
 
-LiDAR (airborne laser scanning) derived 99th height percentile raster in PRF. This raster can be used as a proxy for the forest canopy height.
+LiDAR (airborne laser scanning, ALS) derived metrics (i.e., statistical summaries) in raster raster format spanning the PRF. This raster can be used as a proxy for the forest canopy height.
+
+The raster contains 67 bands (each band is one metric) which are descibed below. Some descriptions are for a range of bands due to redundancy.
+
+| Band(s)  | Metric Name(s)             | Description                |
+|----------|----------------------------|----------------------------|
+| B1       | avg_95                     |  Average height trimmed at 95% of max height |
+| B2       | avg                        |  Average height      |
+| B3 - B11 | b10, b20, b30, ... , b90   |  Decile % of points between 0 and 99% height       |
+| B12 - B24| dns_2m, dns_4m, dns_5m, ... , dns_25m | Density percentage of all returns Xm - 49m divided by all returns |
+| B25      | kur_95                     |  Kurtosis height trimmed at 95% of max height |
+| B26 - 38 | p01, p05, p10, ... , p99   |  Height percentiles                  |
+| B39      | qav                        |  Average square height |
+| B40      | skew_95                    |  Skewness height trimmed at 95% of max height |
+| B41 - B64| d0_2, d2_4, d4_6, ..., d46_48 | Number of returns from X-Y meters divided by all returns         |
+| B65      | std_95                     | Standard deviation of height trimmed at 95% of max height |
+| B66      | vci_1mbin                  | Vertical Complexity Index (VCI) with a 1 m bin        |
+| B67      | vci_0.5bin                 | Vertical Complexity Index (VCI) with a 0.5 m bin        |
+
 
 ## Sentinel-2 Imagery
 
