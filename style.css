@@ -10,13 +10,83 @@ header {
   color: white;
   padding: 20px;
   text-align: center;
+  position: relative;
+}
+
+.header-content {
+  display: flex;
+  align-items: center; /* Vertically aligns items in the middle */
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: center; /* Centers the image */
+ 
 }
 
 #banner-image {
-  max-width: 100%;
+  width: 400px;
   height: auto;
-  margin-top: 10px;
+  display: block;
+  flex-shrink: 0;
+
+  max-width: 100%;
 }
+
+.tutorial-table {
+  border-collapse: collapse;
+  max-width: 250px;
+  font-size: 0.85rem;
+  color: black;
+  background-color: white;
+  padding: 10px;
+  border-radius: 4px;
+
+  /* Default (wide screen) positioning */
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.tutorial-table th,
+.tutorial-table td {
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.tutorial-table th {
+  background-color: #f4f4f4;
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* Adjust breakpoint as needed. 900px is a common tablet breakpoint. */
+@media (max-width: 900px) {
+  .header-content {
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items along the main axis (now vertical) */
+    align-items: center; /* Center items along the cross axis (now horizontal) */
+    padding: 20px; /* Adjust padding for smaller screens if necessary */
+  }
+
+  #banner-image {
+    width: 100%; /* Image takes full width of its container */
+    max-width: 400px; /* But doesn't get larger than its original size */
+    margin-bottom: 20px; /* Add space below the image when stacked */
+  }
+
+  .tutorial-table {
+    position: static; /* Remove absolute positioning */
+    transform: none; /* Remove any transform */
+    margin: 0 auto; /* Center the table horizontally */
+    width: 100%; /* Allow table to take full width */
+    max-width: 300px; /* Limit max width for readability */
+  }
+}
+
 
 nav {
   background-color: #a3b18a;
@@ -55,7 +125,9 @@ table {
   margin-top: 10px;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid #ccc;
   padding: 8px;
 }
