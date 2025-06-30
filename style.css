@@ -37,57 +37,46 @@ header {
   border-collapse: collapse;
   max-width: 250px;
   font-size: 0.85rem;
-  color: black;
-  background-color: white;
+  color: #f0f0f0; /* Light text for dark background */
+  background-color: #3a5a40; /* Wood colour */
   padding: 10px;
-  border-radius: 4px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 
-  /* Default (wide screen) positioning */
   position: absolute;
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
+
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 6px;
+  
 }
 
 .tutorial-table th,
 .tutorial-table td {
-  padding: 4px 6px;
-  border: 1px solid #ccc;
+  padding: 6px 8px;
+  border: 1px solid #000000; /* Slightly lighter green border */
   text-align: left;
   word-wrap: break-word;
 }
 
 .tutorial-table th {
-  background-color: #f4f4f4;
+  background-color: #a3b18a; /* Slightly different shade for contrast */
+  color: #ffffff;
 }
 
-/* --- Media Queries for Responsiveness --- */
-
-/* Adjust breakpoint as needed. 900px is a common tablet breakpoint. */
-@media (max-width: 900px) {
-  .header-content {
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center items along the main axis (now vertical) */
-    align-items: center; /* Center items along the cross axis (now horizontal) */
-    padding: 20px; /* Adjust padding for smaller screens if necessary */
-  }
-
-  #banner-image {
-    width: 100%; /* Image takes full width of its container */
-    max-width: 400px; /* But doesn't get larger than its original size */
-    margin-bottom: 20px; /* Add space below the image when stacked */
-  }
-
-  .tutorial-table {
-    position: static; /* Remove absolute positioning */
-    transform: none; /* Remove any transform */
-    margin: 0 auto; /* Center the table horizontally */
-    width: 100%; /* Allow table to take full width */
-    max-width: 300px; /* Limit max width for readability */
-  }
+.tutorial-table td a {
+  color: #b0e0c0; /* Light mint green for links */
+  text-decoration: underline;
 }
 
+.tutorial-table td a:hover {
+  color: #d2f7dc;
+  text-decoration: none;
+}
 
 nav {
   background-color: #a3b18a;
@@ -124,6 +113,7 @@ table {
   border-collapse: collapse;
   width: 100%;
   margin-top: 10px;
+  border-radius: 6px;
 }
 
 table,
@@ -131,6 +121,7 @@ th,
 td {
   border: 1px solid #ccc;
   padding: 8px;
+  
 }
 
 footer {
@@ -138,4 +129,30 @@ footer {
   padding: 10px;
   background-color: #3a5a40;
   color: white;
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* Adjust breakpoint as needed. 900px is a common tablet breakpoint. */
+@media (max-width: 900px) {
+  .header-content {
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items along the main axis (now vertical) */
+    align-items: center; /* Center items along the cross axis (now horizontal) */
+    padding: 20px; /* Adjust padding for smaller screens if necessary */
+  }
+
+  #banner-image {
+    width: 100%; /* Image takes full width of its container */
+    max-width: 400px; /* But doesn't get larger than its original size */
+    margin-bottom: 20px; /* Add space below the image when stacked */
+  }
+
+  .tutorial-table {
+    position: static; /* Remove absolute positioning */
+    transform: none; /* Remove any transform */
+    margin: 0 auto; /* Center the table horizontally */
+    width: 100%; /* Allow table to take full width */
+    max-width: 300px; /* Limit max width for readability */
+  }
 }
