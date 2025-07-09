@@ -14,6 +14,10 @@
 
 These tutorials make use of the publicly available Petawawa Research Forest (PRF)  dataset provided by the Canadian Forest Service (CFS).  The PRF is the oldest research forest in Canada, dating back to 1918. As such, the area has a rich historical record of remote sensing and forest inventory data, and has recently become a remote sensing "supersite".
 
+**The tutorials are also hosted at the following link:**
+
+[https://subornaa.github.io/Data-Analytics-Tutorials](https://subornaa.github.io/Data-Analytics-Tutorials/)
+
 **You can view the full PRF dataset at the following link:**
 
 [https://opendata.nfis.org/mapserver/PRF.html](https://opendata.nfis.org/mapserver/PRF.html)
@@ -175,3 +179,11 @@ It is also worth noting that information available to AI is in many cases out of
 * [White, Joanne C., et al. "The Petawawa Research Forest: Establishment of a remote sensing supersite." The Forestry Chronicle 95.3 (2019): 149-156.](https://doi.org/10.5558/tfc2019-024).
 
 * [Hoepting, Michael, Trevor Jones, and Jeff Fera. "Collaborating on climate change at the Petawawa Research Forest." The Forestry Chronicle 95.2 (2019): 62-65.](https://pubs.cif-ifc.org/doi/abs/10.5558/tfc2019-012)
+
+# Creative Commons License
+
+This tutorial series is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. You may share, adapt the content and may distribute your contributions under the same license (CC BY-NC-SA 4.0), but you have to give appropriate credit, and cannot use material for the commercial purposes.
+
+<img src = 'images/cc_license.png' width = 70%>
+
+
