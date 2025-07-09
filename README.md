@@ -184,6 +184,6 @@ It is also worth noting that information available to AI is in many cases out of
 
 This tutorial series is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. You may share, adapt the content and may distribute your contributions under the same license (CC BY-NC-SA 4.0), but you have to give appropriate credit, and cannot use material for the commercial purposes.
 
-<img src = 'images/cc_license.png' width = 70%>
+<img src = 'images/cc_license.png' width = 40%>
 
 
