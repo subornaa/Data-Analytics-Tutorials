@@ -87,6 +87,10 @@ nav {
 nav ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* allows wrapping instead of ugly overlap */
+  justify-content: center; /* keeps it centered */
+  gap: 15px; /* adds space between items */
 }
 
 nav li {
@@ -154,5 +158,9 @@ footer {
     margin: 0 auto; /* Center the table horizontally */
     width: 100%; /* Allow table to take full width */
     max-width: 300px; /* Limit max width for readability */
+  }
+  nav ul {
+    flex-direction: column; /* stack items */
+    align-items: center;
   }
 }
