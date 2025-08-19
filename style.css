@@ -135,6 +135,60 @@ footer {
   color: white;
 }
 
+.contributors {
+  width: 90%;            /* take 90% of screen width */
+  max-width: 1000px;     /* optional: cap it so it doesn’t get too wide */
+  margin: 0 auto;        /* center horizontally */
+}
+
+/* --- Contributor list --- */
+.contributor-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 6px;
+  overflow: hidden; /* ensures rounded corners */
+  background-color: #ffffff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.contributor-table th,
+.contributor-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.contributor-table th {
+  background-color: #a3b18a; /* same green shade as nav */
+  color: #fff;
+  font-weight: bold;
+}
+
+/* --- Citation --- */
+.citation-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-left: 6px solid #a3b18a; /* green accent */
+  background-color: #f0f7f3;      /* soft green background */
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #1b4332;
+}
+
+.citation-box::before {
+  content: "💡"; /* light bulb icon */
+  font-size: 18px;
+}
+
+.citation-text {
+  margin: 0;
+}
+
 /* --- Media Queries for Responsiveness --- */
 
 /* Adjust breakpoint as needed. 900px is a common tablet breakpoint. */
