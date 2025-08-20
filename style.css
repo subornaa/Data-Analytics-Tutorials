@@ -1,220 +1,248 @@
+/* ---------- Base / desktop (unchanged look) ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background-color: #f9f9f9;
-  color: #333;
+    margin: 0;
+    background: #f9f9f9;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* make <pre> and <code> wrap or scroll instead of pushing page wide */
+pre,
+code {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-x: auto;
+    max-width: 100%;
 }
 
 header {
-  background-color: #3a5a40;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  position: relative;
+    background-color: #3a5a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
 }
 
-
+/* Updated header content using flexbox for responsive layout */
 .header-content {
-  display: flex;
-  align-items: center; /* Vertically aligns items in the middle */
-  position: relative;
-  padding-left: 20px;
-  padding-right: 20px;
-  justify-content: center; /* Centers the image */
- 
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to a new line on smaller screens */
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 0 20px;
 }
 
 #banner-image {
-  width: 400px;
-  height: auto;
-  display: block;
-  flex-shrink: 0;
-
-  max-width: 100%;
+    width: 400px;
+    flex: 0 1 400px;
 }
 
+/* Updated tutorial table styles, removed absolute positioning */
 .tutorial-table {
-  border-collapse: collapse;
-  max-width: 250px;
-  font-size: 0.85rem;
-  color: #f0f0f0; /* Light text for dark background */
-  background-color: #3a5a40; /* Wood colour */
-  padding: 10px;
-  border-radius: 6px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    border-collapse: separate;
+    border-spacing: 0;
+    max-width: 250px;
+    width: 250px;
+    font-size: 0.85rem;
+    color: #f0f0f0;
+    background-color: #3a5a40;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .3);
 
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-
-  border-collapse: separate;
-  border-spacing: 0;
-  border-radius: 6px;
-  
+    /* Removed these properties that caused the overlap */
+    position: static;
+    right: auto;
+    top: auto;
+    transform: none;
+    z-index: 1;
 }
 
 .tutorial-table th,
 .tutorial-table td {
-  padding: 6px 8px;
-  border: 1px solid #000000; /* Slightly lighter green border */
-  text-align: left;
-  word-wrap: break-word;
+    padding: 6px 8px;
+    border: 1px solid #000;
+    text-align: left;
 }
 
 .tutorial-table th {
-  background-color: #a3b18a; /* Slightly different shade for contrast */
-  color: #ffffff;
+    background-color: #a3b18a;
+    color: #fff;
 }
 
 .tutorial-table td a {
-  color: #b0e0c0; /* Light mint green for links */
-  text-decoration: underline;
+    color: #b0e0c0;
+    text-decoration: underline;
 }
 
 .tutorial-table td a:hover {
-  color: #d2f7dc;
-  text-decoration: none;
+    color: #d2f7dc;
+    text-decoration: none;
 }
 
 nav {
-  background-color: #a3b18a;
-  padding: 10px;
-  text-align: center;
+    background-color: #a3b18a;
+    padding: 10px;
+    text-align: center;
 }
 
 nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap; /* allows wrapping instead of ugly overlap */
-  justify-content: center; /* keeps it centered */
-  gap: 15px; /* adds space between items */
-}
-
-nav li {
-  display: inline;
-  margin: 0 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
 nav a {
-  color: #1b4332;
-  font-weight: bold;
-  text-decoration: none;
+    color: #1b4332;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 main {
-  padding: 20px;
+    padding: 20px;
 }
 
 h2 {
-  border-bottom: 2px solid #588157;
-  padding-bottom: 5px;
+    border-bottom: 2px solid #588157;
+    padding-bottom: 5px;
 }
 
 table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-top: 10px;
-  border-radius: 6px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
 }
 
 table,
 th,
 td {
-  border: 1px solid #ccc;
-  padding: 8px;
-  
+    border: 1px solid #ccc;
+    padding: 8px;
 }
 
 footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #3a5a40;
-  color: white;
+    text-align: center;
+    padding: 10px;
+    background-color: #3a5a40;
+    color: white;
 }
 
 .contributors {
-  width: 90%;            /* take 90% of screen width */
-  max-width: 1000px;     /* optional: cap it so it doesn’t get too wide */
-  margin: 0 auto;        /* center horizontally */
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-/* --- Contributor list --- */
 .contributor-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-top: 20px;
-  border-radius: 6px;
-  overflow: hidden; /* ensures rounded corners */
-  background-color: #ffffff;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .1);
 }
 
 .contributor-table th,
 .contributor-table td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: left;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
 }
 
 .contributor-table th {
-  background-color: #a3b18a; /* same green shade as nav */
-  color: #fff;
-  font-weight: bold;
+    background: #a3b18a;
+    color: #fff;
+    font-weight: bold;
 }
 
-/* --- Citation --- */
 .citation-box {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  border-left: 6px solid #a3b18a; /* green accent */
-  background-color: #f0f7f3;      /* soft green background */
-  padding: 12px 15px;
-  border-radius: 6px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: #1b4332;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-left: 6px solid #a3b18a;
+    background: #f0f7f3;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin: 20px 0 10px;
+    font-weight: bold;
+    color: #1b4332;
 }
 
 .citation-box::before {
-  content: "💡"; /* light bulb icon */
-  font-size: 18px;
+    content: "💡";
+    font-size: 18px;
 }
 
-.citation-text {
-  margin: 0;
-}
-
-/* --- Media Queries for Responsiveness --- */
-
-/* Adjust breakpoint as needed. 900px is a common tablet breakpoint. */
+/* ---------- Tablet tweaks (stack header; center table) ---------- */
 @media (max-width: 900px) {
-  .header-content {
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center items along the main axis (now vertical) */
-    align-items: center; /* Center items along the cross axis (now horizontal) */
-    padding: 20px; /* Adjust padding for smaller screens if necessary */
-  }
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
 
-  #banner-image {
-    width: 100%; /* Image takes full width of its container */
-    max-width: 400px; /* But doesn't get larger than its original size */
-    margin-bottom: 20px; /* Add space below the image when stacked */
-  }
+    #banner-image {
+        width: 100%;
+        max-width: 500px;
+    }
 
-  .tutorial-table {
-    position: static; /* Remove absolute positioning */
-    transform: none; /* Remove any transform */
-    margin: 0 auto; /* Center the table horizontally */
-    width: 100%; /* Allow table to take full width */
-    max-width: 300px; /* Limit max width for readability */
-  }
-  nav ul {
-    flex-direction: column; /* stack items */
-    align-items: center;
-  }
+    .tutorial-table {
+        width: min(420px, 100%);
+        max-width: 100%;
+        margin: 8px auto 0;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contributors {
+        width: 95%;
+    }
+}
+
+/* ---------- Phone tweaks (avoid any overflow) ---------- */
+@media (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Enables horizontal scrolling for tables */
+    .contributor-table,
+    main table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* keep license image reasonable */
+    main img {
+        max-width: 100%;
+        height: auto;
+    }
 }
