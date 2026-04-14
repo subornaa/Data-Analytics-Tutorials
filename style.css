@@ -1,4 +1,4 @@
-/* ---------- Base / desktop (unchanged look) ---------- */
+/* ---------- Base / Desktop ---------- */
 *,
 *::before,
 *::after {
@@ -10,6 +10,7 @@ body {
     margin: 0;
     background: #f9f9f9;
     color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 img {
@@ -18,14 +19,15 @@ img {
     display: block;
 }
 
-
-/* make <pre> and <code> wrap or scroll instead of pushing page wide */
 pre,
 code {
     white-space: pre-wrap;
     word-break: break-word;
     overflow-x: auto;
     max-width: 100%;
+    background: #eee;
+    padding: 2px 4px;
+    border-radius: 4px;
 }
 
 header {
@@ -33,13 +35,11 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
-    position: relative;
 }
 
-/* Updated header content using flexbox for responsive layout */
 .header-content {
     display: flex;
-    flex-wrap: wrap; /* Allows items to wrap to a new line on smaller screens */
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 16px;
@@ -51,25 +51,17 @@ header {
     flex: 0 1 400px;
 }
 
-/* Updated tutorial table styles, removed absolute positioning */
+/* Tutorial table in header */
 .tutorial-table {
     border-collapse: separate;
     border-spacing: 0;
-    max-width: 250px;
-    width: 250px;
+    max-width: 300px;
     font-size: 0.85rem;
     color: #f0f0f0;
     background-color: #3a5a40;
     padding: 10px;
     border-radius: 6px;
     box-shadow: 0 0 8px rgba(0, 0, 0, .3);
-
-    /* Removed these properties that caused the overlap */
-    position: static;
-    right: auto;
-    top: auto;
-    transform: none;
-    z-index: 1;
 }
 
 .tutorial-table th,
@@ -89,15 +81,14 @@ header {
     text-decoration: underline;
 }
 
-.tutorial-table td a:hover {
-    color: #d2f7dc;
-    text-decoration: none;
-}
-
+/* Navigation */
 nav {
     background-color: #a3b18a;
     padding: 10px;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
@@ -116,62 +107,47 @@ nav a {
     text-decoration: none;
 }
 
+nav a:hover {
+    text-decoration: underline;
+}
+
 main {
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 h2 {
     border-bottom: 2px solid #588157;
     padding-bottom: 5px;
+    margin-top: 40px;
 }
 
+/* General Tables */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    background: #fff;
 }
 
-table,
 th,
 td {
-    border: 1px solid #ccc;
-    padding: 8px;
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #3a5a40;
-    color: white;
-}
-
-.contributors {
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.contributor-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    border-radius: 6px;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0 0 6px rgba(0, 0, 0, .1);
-}
-
-.contributor-table th,
-.contributor-table td {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: left;
 }
 
-.contributor-table th {
-    background: #a3b18a;
-    color: #fff;
-    font-weight: bold;
+th {
+    background-color: #a3b18a;
+    color: white;
+}
+
+/* Contributors & Citation */
+.contributors {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .citation-box {
@@ -192,57 +168,87 @@ footer {
     font-size: 18px;
 }
 
-/* ---------- Tablet tweaks (stack header; center table) ---------- */
+/* Lecture Grid Styles */
+.page-intro {
+    background: #f0f7f3;
+    border-left: 6px solid #a3b18a;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin-bottom: 24px;
+    color: #1b4332;
+}
+
+.lecture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.lecture-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 18px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.2s;
+}
+
+.lecture-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 14px rgba(58, 90, 64, 0.18);
+}
+
+.lecture-card h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #1b4332;
+}
+
+.lecture-card-links {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    flex: 1;
+}
+
+.btn-slides {
+    background: #3a5a40;
+    color: #fff;
+}
+
+.btn-notebook {
+    background: #a3b18a;
+    color: #1b4332;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #3a5a40;
+    color: white;
+    margin-top: 50px;
+}
+
+/* ---------- Mobile Responsiveness ---------- */
 @media (max-width: 900px) {
     .header-content {
         flex-direction: column;
-        align-items: center;
-        padding: 10px 0;
     }
 
     #banner-image {
         width: 100%;
-        max-width: 500px;
-    }
-
-    .tutorial-table {
-        width: min(420px, 100%);
-        max-width: 100%;
-        margin: 8px auto 0;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .contributors {
-        width: 95%;
-    }
-}
-
-/* ---------- Phone tweaks (avoid any overflow) ---------- */
-@media (max-width: 600px) {
-    body {
-        overflow-x: hidden;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    /* Enables horizontal scrolling for tables */
-    .contributor-table,
-    main table {
-        display: block;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    /* keep license image reasonable */
-    main img {
-        max-width: 100%;
-        height: auto;
     }
 }
